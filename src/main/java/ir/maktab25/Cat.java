@@ -12,8 +12,8 @@ public class Cat extends Animal {
         setName(name);
     }
 
-    public BreedType getBreed() {
-        return breed;
+    public String  getBreed() {
+        return breed.toString();
     }
 
     public void setBreed(BreedType breed) {
