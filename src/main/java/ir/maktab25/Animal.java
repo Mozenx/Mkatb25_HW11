@@ -15,4 +15,4 @@ public class Animal {
         this.name = name;
     }
 
-}
+}//end of class

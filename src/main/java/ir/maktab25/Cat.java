@@ -31,4 +31,4 @@ public class Cat extends Animal {
                 " ,breed=" + breed +
                 '}';
     }
-}
+}//end of class
