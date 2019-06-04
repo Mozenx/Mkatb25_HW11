@@ -6,17 +6,16 @@ import java.util.List;
 
 public class App
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
 
-        List<Animal> animals = new ArrayList<>();
+        List<Animal> a = new ArrayList<>();
 
-        for(int i = 1; i < 100; i++){
+        for(int i = 0; i < 99; i++){
 
-            animals.add(new Cat("cat"+i));
+            Cat c = new Cat("cat"+(i+1));
+            BreedType [] breeds = BreedType.values();
+            c.setBreed(breeds[i]);
+            a.add(c);
         }
-
-
-
     }
 }
