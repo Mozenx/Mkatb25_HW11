@@ -16,6 +16,10 @@ public class Cat extends Animal {
         return breed.toString();
     }
 
+    public BreedType getBreedInBreedType(){
+        return breed;
+    }
+
     public void setBreed(BreedType breed) {
         this.breed = breed;
     }

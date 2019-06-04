@@ -19,10 +19,10 @@ public class App
             a.add(c);
         }
 
-        final int i2;
-        List<Animal> r = a.stream()
+        List<BreedType > r = a.stream()
                 .filter(a2 -> a2.getBreed().startsWith("A") || a2.getBreed().startsWith("C") || a2.getBreed().startsWith("P"))
                 .filter(a2 -> new Integer(a2.getName().substring(3))%2 == 0)
+                .map(a2 -> a2.getBreedInBreedType())
                 .collect(Collectors.toList());
 
 
