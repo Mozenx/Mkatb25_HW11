@@ -19,10 +19,12 @@ public class App
             a.add(c);
         }
 
+        final int i2;
         List<Animal> r = a.stream()
                 .filter(a2 -> a2.getBreed().startsWith("A") || a2.getBreed().startsWith("C") || a2.getBreed().startsWith("P"))
+                .filter(a2 -> new Integer(a2.getName().substring(3))%2 == 0)
                 .collect(Collectors.toList());
-        
+
 
         r.forEach(System.out::println);
     }
