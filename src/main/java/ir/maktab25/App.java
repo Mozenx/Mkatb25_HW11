@@ -11,7 +11,7 @@ public class App {
 
         List<Cat> cats = createListOfCats();
 
-        List<BreedType> catsFilter = filter(cats);
+        List<BreedType> catsFilter = filterCats(cats);
 
         catsFilter.forEach(System.out::println);
 
@@ -32,7 +32,7 @@ public class App {
     }//end of createListOfCats method
 
     //this method filter list of cats
-    public static List<BreedType> filter(List<Cat> cats){
+    public static List<BreedType> filterCats(List<Cat> cats){
 
         List<BreedType> result = cats.stream()
                 .filter(cat -> cat.getBreed().startsWith("A") || cat.getBreed().startsWith("C") || cat.getBreed().startsWith("P"))//step one
