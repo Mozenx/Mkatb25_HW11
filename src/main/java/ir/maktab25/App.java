@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class App
-{
+public class App {
+
     public static void main( String[] args ) {
 
         List<Cat> cats = createListOfCats();
@@ -41,5 +41,5 @@ public class App
                 .collect(Collectors.toList());//step four
         return result;
     }//end of filter method
-    
+
 }//end of class

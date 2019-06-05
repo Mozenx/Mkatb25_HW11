@@ -31,4 +31,14 @@ public class Cat extends Animal {
                 " ,breed=" + breed +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Cat c = (Cat) obj;
+
+        if(c.getName().equals(this.getName()))
+            return true;
+
+        else return false;
+    }
 }//end of class
