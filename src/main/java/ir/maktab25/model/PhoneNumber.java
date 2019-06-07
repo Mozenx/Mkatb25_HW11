@@ -2,10 +2,11 @@ package ir.maktab25.model;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "phone_numbers")
-public class PhoneNumber {
+public class PhoneNumber implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
