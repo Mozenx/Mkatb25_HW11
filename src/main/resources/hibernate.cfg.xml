@@ -14,7 +14,7 @@
     <property name="hibernate.dialect">org.hibernate.dialect.MariaDB10Dialect</property>
 
     <!-- DB schema will be updated if needed -->
-     <property name="hibernate.hbm2ddl.auto">update</property>
+<!--     <property name="hibernate.hbm2ddl.auto">create</property>-->
 
     <mapping class="ir.maktab25.model.Employee"/>
     <mapping class="ir.maktab25.model.Address"/>

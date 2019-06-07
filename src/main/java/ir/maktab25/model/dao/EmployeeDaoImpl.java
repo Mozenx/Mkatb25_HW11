@@ -2,6 +2,7 @@ package ir.maktab25.model.dao;
 
 import ir.maktab25.base.BaseDaoImpl;
 import ir.maktab25.model.Employee;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 public class EmployeeDaoImpl extends BaseDaoImpl<Employee> implements EmployeeDao {
@@ -20,7 +21,12 @@ public class EmployeeDaoImpl extends BaseDaoImpl<Employee> implements EmployeeDa
 
     @Override
     public Double maxSalaryByCity(String city) {
-        return null;
+        Session session = factory.openSession();
+
+        Double employee =(Double) session.createQuery("select max(emp.salary) from Employee emp join emp.addresses add where add.city =:c ")
+                .setParameter("c",city).uniqueResult();
+
+        return employee;
     }
 
     @Override
