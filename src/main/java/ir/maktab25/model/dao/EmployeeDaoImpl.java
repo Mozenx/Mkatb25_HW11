@@ -53,6 +53,10 @@ public class EmployeeDaoImpl extends BaseDaoImpl<Employee> implements EmployeeDa
 
     @Override
     public Employee findEmpByTelNumber(String telNumber) {
-        return null;
+        Session session = factory.openSession();
+
+        Employee employee = (Employee) session.createQuery("select emp from Employee emp join emp.addresses add join add.phoneNumberList num where num.telNumber = :n" )
+                .setParameter("n",telNumber).getSingleResult();
+        return employee;
     }
 }

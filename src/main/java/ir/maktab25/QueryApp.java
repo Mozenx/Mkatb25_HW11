@@ -16,8 +16,9 @@ public class QueryApp {
         Double salary = dao.maxSalaryByCity("tehran");
         System.out.println(salary);
 
-        Employee employee = dao1.employeeMaxSalaryByCity("tehran");
+//        Employee employee = dao1.employeeMaxSalaryByCity("tehran");
 //        Employee employee = dao1.findEmpByPostalCode("111");
+        Employee employee = dao1.findEmpByTelNumber("9812");
         System.out.println(employee);
 
 
