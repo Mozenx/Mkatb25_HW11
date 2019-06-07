@@ -89,15 +89,15 @@ public class Address implements Serializable {
         this.phoneNumberList = phoneNumberList;
     }
 
-    @Override
-    public String toString() {
-        return "Address{" +
-                "id=" + id +
-                ", postalCode='" + postalCode + '\'' +
-                ", postalAddress='" + postalAddress + '\'' +
-                ", city='" + city + '\'' +
-                ", employee=" + employee +
-                ", phoneNumberList=" + phoneNumberList +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Address{" +
+//                "id=" + id +
+//                ", postalCode='" + postalCode + '\'' +
+//                ", postalAddress='" + postalAddress + '\'' +
+//                ", city='" + city + '\'' +
+//                ", employee=" + employee +
+//                ", phoneNumberList=" + phoneNumberList +
+//                '}';
+//    }
 }

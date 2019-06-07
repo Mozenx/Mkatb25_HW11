@@ -41,7 +41,14 @@ public class EmployeeDaoImpl extends BaseDaoImpl<Employee> implements EmployeeDa
 
     @Override
     public Employee findEmpByPostalCode(String postalCode) {
-        return null;
+        Session session = factory.openSession();
+
+        Object employee = session.createQuery("select emp from Employee emp join emp.addresses add where add.postalCode=:p")
+                .setParameter("p",postalCode).getSingleResult();
+
+        Employee employee1 = (Employee) employee;
+
+        return employee1;
     }
 
     @Override

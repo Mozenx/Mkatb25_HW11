@@ -17,7 +17,10 @@ public class QueryApp {
         System.out.println(salary);
 
         Employee employee = dao1.employeeMaxSalaryByCity("tehran");
+//        Employee employee = dao1.findEmpByPostalCode("111");
         System.out.println(employee);
+
+
 
         factory.close();
     }
