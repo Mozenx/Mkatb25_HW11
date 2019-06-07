@@ -3,8 +3,7 @@ package ir.maktab25;
 import ir.maktab25.model.Address;
 import ir.maktab25.model.Employee;
 import ir.maktab25.model.PhoneNumber;
-import ir.maktab25.model.dao.EmployeeDao;
-import ir.maktab25.model.dao.EmployeeDaoImpl;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -50,5 +49,6 @@ public class App
 
         session.close();
         factory.close();
-    }
-}
+
+    }//end of main method
+}//end of class

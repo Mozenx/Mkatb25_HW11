@@ -21,9 +21,11 @@ public class Employee implements Serializable {
     @Column(name = "salary")
     private Double salary;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "employee_id")
     private List<Address> addresses;
+
+    //constructors
 
     public Employee() {
     }
@@ -76,6 +78,12 @@ public class Employee implements Serializable {
         this.addresses = addresses;
     }
 
+    public void print(){
+        for(Address address : this.addresses){
+            address.toString();
+        }
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -86,4 +94,5 @@ public class Employee implements Serializable {
                 ", addresses=" + addresses +
                 '}';
     }
-}
+
+}//end of class

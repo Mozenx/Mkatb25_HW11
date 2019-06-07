@@ -12,4 +12,4 @@ public interface EmployeeDao extends BaseDao<Employee> {
     Employee findEmpByPostalCode(String postalCode);
 
     Employee findEmpByTelNumber(String telNumber);
-}
+}//end of interface

@@ -18,6 +18,8 @@ public class PhoneNumber implements Serializable {
     @Column(name = "mob_number")
     private String mobNumber;
 
+    //constructors
+
     public PhoneNumber() {
     }
 
@@ -60,4 +62,4 @@ public class PhoneNumber implements Serializable {
                 ", mobNumber='" + mobNumber + '\'' +
                 '}';
     }
-}
+}//end of class

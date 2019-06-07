@@ -24,9 +24,11 @@ public class Address implements Serializable {
     @ManyToOne
     private Employee employee;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "address_id")
     private List<PhoneNumber> phoneNumberList;
+
+    //constructors
 
     public Address() {
     }
@@ -89,15 +91,14 @@ public class Address implements Serializable {
         this.phoneNumberList = phoneNumberList;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Address{" +
-//                "id=" + id +
-//                ", postalCode='" + postalCode + '\'' +
-//                ", postalAddress='" + postalAddress + '\'' +
-//                ", city='" + city + '\'' +
-//                ", employee=" + employee +
-//                ", phoneNumberList=" + phoneNumberList +
-//                '}';
-//    }
-}
+    @Override
+    public String toString() {
+        return "Address{" +
+                "id=" + id +
+                ", postalCode='" + postalCode + '\'' +
+                ", postalAddress='" + postalAddress + '\'' +
+                ", city='" + city + '\'' +
+                ", phoneNumberList=" + phoneNumberList +
+                '}';
+    }
+}//end of class

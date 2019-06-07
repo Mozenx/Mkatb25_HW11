@@ -26,6 +26,8 @@ public class EmployeeDaoImpl extends BaseDaoImpl<Employee> implements EmployeeDa
         Double salaryByCity =(Double) session.createQuery("select max(emp.salary) from Employee emp join emp.addresses add where add.city =:c ")
                 .setParameter("c",city).uniqueResult();
 
+        session.close();
+
         return salaryByCity;
     }
 
@@ -35,6 +37,8 @@ public class EmployeeDaoImpl extends BaseDaoImpl<Employee> implements EmployeeDa
 
         Employee employee =(Employee) session.createQuery("select emp from Employee emp where emp.salary = (select max(e.salary) from Employee e join e.addresses addr where addr.city=:c)")
                 .setParameter("c",city).getSingleResult();
+
+        session.close();
 
         return employee;
     }
@@ -48,6 +52,8 @@ public class EmployeeDaoImpl extends BaseDaoImpl<Employee> implements EmployeeDa
 
         Employee employee1 = (Employee) employee;
 
+        session.close();
+
         return employee1;
     }
 
@@ -57,6 +63,9 @@ public class EmployeeDaoImpl extends BaseDaoImpl<Employee> implements EmployeeDa
 
         Employee employee = (Employee) session.createQuery("select emp from Employee emp join emp.addresses add join add.phoneNumberList num where num.telNumber = :n" )
                 .setParameter("n",telNumber).getSingleResult();
+
+        session.close();
+
         return employee;
     }
-}
+}//end of class
